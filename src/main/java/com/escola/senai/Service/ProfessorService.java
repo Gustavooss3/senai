@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProfessorService {
+public class EscolaService {
     private final ProfessorRepository repository;
 
-    public ProfessorService(ProfessorRepository repository) {
+    public EscolaService(ProfessorRepository repository) {
         this.repository = repository;
     }
 
@@ -18,11 +18,11 @@ public class ProfessorService {
         return repository.findAll();
     }
 
-     public Professor salvar(Professor professor){
+     public Professor salvarProfessor(Professor professor){
         return repository.save(professor);
     }
 
-    public void excluirAluno(Long id){
+    public void excluirProfessor(Long id){
         repository.deleteById(id);
     }
 
